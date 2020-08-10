@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="Live_Menu_Point_Of_Sale.Views.SavedVariationsDialogView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Live_Menu_Point_Of_Sale.Views"
+             xmlns:cal="http://www.caliburnproject.org"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             FontSize="17">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="319*"></RowDefinition>
+            <RowDefinition Height="131*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <DataGrid ItemsSource="{Binding SavedVariations}" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Coupon" Binding="{Binding Cpn}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Collection Price" Binding="{Binding CollectionPrice}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Delivery Price" Binding="{Binding DeliveryPrice}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Dine In Price" Binding="{Binding DineInPrice}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <Button x:Name="Cancel">Cancel</Button>
+            <Button x:Name="Save">Save</Button>
+        </StackPanel>
+        
+    </Grid>
+</UserControl>

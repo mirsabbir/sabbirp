@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="Live_Menu_Point_Of_Sale.Views.AddPriceDialogView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Live_Menu_Point_Of_Sale.Views"
+             xmlns:cal="http://www.caliburnproject.org"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             FontSize="17">
+    <Grid>
+        <Grid.ColumnDefinitions>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <StackPanel>
+            <Label>Coupon</Label>
+            <TextBox x:Name="Coupon"></TextBox>
+            <Label>Delivery Price</Label>
+            <TextBox x:Name="DeliveryPrice"></TextBox>
+            <Label>Dine In Price</Label>
+            <TextBox x:Name="DineInPrice"></TextBox>
+            <Label>Collection Price</Label>
+            <TextBox x:Name="CollectionPrice"></TextBox>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <Button x:Name="Cancel" Background="Red">Cancel</Button>
+            <Button x:Name="Create">Create</Button>
+        </StackPanel>
+        
+    </Grid>
+</UserControl>

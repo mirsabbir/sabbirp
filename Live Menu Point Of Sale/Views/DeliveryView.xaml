@@ -1,0 +1,133 @@
+﻿<UserControl x:Class="Live_Menu_Point_Of_Sale.Views.DeliveryView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Live_Menu_Point_Of_Sale.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             xmlns:cal="http://www.caliburnproject.org"
+             FontSize="17">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="61*"></ColumnDefinition>
+            <ColumnDefinition Width="261*"></ColumnDefinition>
+            <ColumnDefinition Width="78*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="67*"></RowDefinition>
+            <RowDefinition Height="209*"></RowDefinition>
+            <RowDefinition Height="174*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Column="1" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Button Margin="2" Grid.Column="0" Content="0" x:Name="P0"></Button>
+            <Button Margin="2" Grid.Column="1" Content="1" x:Name="P1"></Button>
+            <Button Margin="2" Grid.Column="2" Content="2" x:Name="P2"></Button>
+            <Button Margin="2" Grid.Column="3" Content="3" x:Name="P3"></Button>
+            <Button Margin="2" Grid.Column="4" Content="4" x:Name="P4"></Button>
+            <Button Margin="2" Grid.Column="5" Content="5" x:Name="P5"></Button>
+            <Button Margin="2" Grid.Column="6" Content="6" x:Name="P6"></Button>
+            <Button Margin="2" Grid.Column="7" Content="7" x:Name="P7"></Button>
+            <Button Margin="2" Grid.Column="8" Content="8" x:Name="P8"></Button>
+            <Button Margin="2" Grid.Column="9" Content="9" x:Name="P9"></Button>
+            <Button Margin="2" Grid.Column="10" Content="X" x:Name="PCROSS" Background="Red"></Button>
+
+            <Button Margin="2" Grid.Column="0" Grid.Row="1" Content="Q" x:Name="PQ"></Button>
+            <Button Margin="2" Grid.Column="1" Grid.Row="1" Content="W" x:Name="PW"></Button>
+            <Button Margin="2" Grid.Column="2" Grid.Row="1" Content="E" x:Name="PE"></Button>
+            <Button Margin="2" Grid.Column="3" Grid.Row="1" Content="R" x:Name="PR"></Button>
+            <Button Margin="2" Grid.Column="4" Grid.Row="1" Content="T" x:Name="PT"></Button>
+            <Button Margin="2" Grid.Column="5" Grid.Row="1" Content="Y" x:Name="PY"></Button>
+            <Button Margin="2" Grid.Column="6" Grid.Row="1" Content="U" x:Name="PU"></Button>
+            <Button Margin="2" Grid.Column="7" Grid.Row="1" Content="I" x:Name="PI"></Button>
+            <Button Margin="2" Grid.Column="8" Grid.Row="1" Content="O" x:Name="PO"></Button>
+            <Button Margin="2" Grid.Column="9" Grid.Row="1" Content="P" x:Name="PP"></Button>
+            <Button Margin="2" Grid.Column="10" Grid.Row="1" Content="Del" x:Name="PDEL" Background="MediumVioletRed"></Button>
+
+            <Button Margin="2" Grid.Column="0" Grid.Row="2" Content="A" x:Name="PA"></Button>
+            <Button Margin="2" Grid.Column="1" Grid.Row="2" Content="S" x:Name="PS"></Button>
+            <Button Margin="2" Grid.Column="2" Grid.Row="2" Content="D" x:Name="PD"></Button>
+            <Button Margin="2" Grid.Column="3" Grid.Row="2" Content="F" x:Name="PF"></Button>
+            <Button Margin="2" Grid.Column="4" Grid.Row="2" Content="G" x:Name="PG"></Button>
+            <Button Margin="2" Grid.Column="5" Grid.Row="2" Content="H" x:Name="PH"></Button>
+            <Button Margin="2" Grid.Column="6" Grid.Row="2" Content="J" x:Name="PJ"></Button>
+            <Button Margin="2" Grid.Column="7" Grid.Row="2" Content="K" x:Name="PK"></Button>
+            <Button Margin="2" Grid.Column="8" Grid.Row="2" Content="L" x:Name="PL"></Button>
+            <Button Margin="2" Grid.Column="9" Grid.Row="2" Content="@" x:Name="PAT"></Button>
+
+            <Button Margin="2" Grid.Column="0" Grid.Row="3" Content="Z" x:Name="PZ"></Button>
+            <Button Margin="2" Grid.Column="1" Grid.Row="3" Content="X" x:Name="PX"></Button>
+            <Button Margin="2" Grid.Column="2" Grid.Row="3" Content="C" x:Name="PC"></Button>
+            <Button Margin="2" Grid.Column="3" Grid.Row="3" Content="V" x:Name="PV"></Button>
+            <Button Margin="2" Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="3" Content="" x:Name="PSPACE"></Button>
+            <Button Margin="2" Grid.Column="6" Grid.Row="3" Content="B" x:Name="PB"></Button>
+            <Button Margin="2" Grid.Column="7" Grid.Row="3" Content="N" x:Name="PN"></Button>
+            <Button Margin="2" Grid.Column="8" Grid.Row="3" Content="M" x:Name="PM"></Button>
+            <Button Margin="2" Grid.Column="9" Grid.Row="3" Content="." x:Name="PDOT"></Button>
+
+
+            <Button Margin="2" Grid.Column="10" 
+                    Grid.RowSpan="2"
+                    Grid.Row="2"
+                    Content="Enter"
+                    x:Name="PENTER"
+                    Background="LawnGreen"></Button>
+
+        </Grid>
+
+        <StackPanel Grid.Row="2" Grid.Column="0" Orientation="Vertical" VerticalAlignment="Center">
+            <StackPanel HorizontalAlignment="Center">
+                <TextBlock>Due Time :</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                    <Button Width="30" Height="30">+</Button>
+                    <TextBlock FontSize="22">22</TextBlock>
+                    <Button Width="30" Height="30">-</Button>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                    <TextBlock FontSize="30">:</TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                    <Button Width="30" Height="30">+</Button>
+                    <TextBlock FontSize="22">16</TextBlock>
+                    <Button Width="30" Height="30">-</Button>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+
+
+        <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="2" VerticalAlignment="Center">
+            <Button Margin="5,0,0,5" Height="35" x:Name="Delivery">Delivery</Button>
+            <Button Margin="5,0,0,5" Height="35" x:Name="Collect">Collect</Button>
+            <Button Background="Red" Margin="5,0,0,5" Height="35" x:Name="Exit">Exit</Button>
+        </StackPanel>
+
+        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Vertical">
+
+            <Label>Name</Label>
+            <TextBox x:Name="Name"></TextBox>
+            
+        </StackPanel>
+        
+    </Grid>
+</UserControl>

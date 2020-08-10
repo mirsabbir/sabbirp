@@ -1,0 +1,65 @@
+﻿<UserControl x:Class="Live_Menu_Point_Of_Sale.Views.SeatInputDialogView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Live_Menu_Point_Of_Sale.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             FontSize="25">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"></RowDefinition>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition Height="3*"></RowDefinition>
+            <RowDefinition Height="3*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="{Binding Number}"></TextBlock>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Margin="5" Grid.Column="0" x:Name="Press1">1</Button>
+            <Button Margin="5" Grid.Column="1" x:Name="Press2">2</Button>
+            <Button Margin="5" Grid.Column="2" x:Name="Press3">3</Button>
+            <Button Margin="5" Grid.Column="3" x:Name="Press4">4</Button>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Margin="5" Grid.Column="0" x:Name="Press5">5</Button>
+            <Button Margin="5" Grid.Column="1" x:Name="Press6">6</Button>
+            <Button Margin="5" Grid.Column="2" x:Name="Press7">7</Button>
+            <Button Margin="5" Grid.Column="3" x:Name="Press8">8</Button>
+        </Grid>
+
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button Margin="5" Grid.Column="0" x:Name="Press9">9</Button>
+            <Button Margin="5" Grid.Column="1" x:Name="Press0">0</Button>
+            <Button Margin="5" Grid.Column="2" x:Name="PressBackSpace">
+                <Image Source="pack://application:,,,/Images/back.png" Margin="20"></Image>
+            </Button>
+            <Button Margin="5" Grid.Column="3" Background="LawnGreen" x:Name="PressOk">OK</Button>
+        </Grid>
+
+    </Grid>
+</UserControl>

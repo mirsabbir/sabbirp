@@ -1,0 +1,87 @@
+﻿<UserControl x:Class="Live_Menu_Point_Of_Sale.Views.OptionsDialogView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Live_Menu_Point_Of_Sale.Views"
+             xmlns:cal="http://www.caliburnproject.org"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             FontSize="17">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="371*"></RowDefinition>
+            <RowDefinition Height="79*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <ScrollViewer Grid.Row="0" Grid.Column="0" VerticalScrollBarVisibility="Hidden">
+            <ItemsControl ItemsSource="{Binding FoodProduct.Variations}" VerticalAlignment="Center">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel></WrapPanel>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Margin="3">
+                            <Button Background="{Binding Color}" Height="90" Width="90" cal:Message.Attach="[Event Click] = [Action ChangeVariation($this)]">
+                                <TextBlock Text="{Binding Name}" TextWrapping="Wrap"></TextBlock>
+                            </Button>
+                        </StackPanel>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+
+        <ScrollViewer Grid.Row="0" Grid.Column="1" VerticalScrollBarVisibility="Hidden">
+            <ItemsControl ItemsSource="{Binding FoodProduct.Options}" VerticalAlignment="Center">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel></StackPanel>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Vertical">
+                            <TextBlock Text="{Binding Key.Name}"></TextBlock>
+                            <ComboBox ItemsSource="{Binding Value.Second}" SelectedItem="{Binding Value.First}">
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Name}"></TextBlock>
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
+                            </ComboBox>
+                        </StackPanel>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+
+
+
+
+        <StackPanel Grid.Column="2" VerticalAlignment="Center" Height="84" Margin="0,142,0,145">
+            <TextBlock>Write a note:</TextBlock>
+            <TextBox Text="{Binding CartItem.Note, Mode=TwoWay}" TextWrapping="Wrap" AcceptsReturn="True" Height="60"></TextBox>
+        </StackPanel>
+
+
+
+        <StackPanel Grid.Row="1"  Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center" Height="26" Margin="84,25,84,28" Width="98">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type Button}">
+                    <Setter Property="Margin" Value="0,0,10,0"/>
+                </Style>
+            </StackPanel.Resources>
+            <Button x:Name="Cancel">Cancel</Button>
+            <Button x:Name="Ok" >Ok</Button>
+        </StackPanel>
+
+
+    </Grid>
+</UserControl>

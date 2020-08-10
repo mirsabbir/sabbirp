@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="Live_Menu_Point_Of_Sale.Views.ManageOptionsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Live_Menu_Point_Of_Sale.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800"
+             xmlns:cal="http://www.caliburnproject.org"
+             FontSize="17">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="281*"></ColumnDefinition>
+            <ColumnDefinition Width="519*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="377*"></RowDefinition>
+            <RowDefinition Height="73*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <DataGrid
+            ItemsSource="{Binding OptionKeys}"
+            SelectedItem="{Binding SelectedKey,Mode=TwoWay}"
+            
+            AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}"></DataGridTextColumn>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button cal:Message.Attach="[Event Click] = [Action KeyClicked()]"
+                                >Select</Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid 
+            ItemsSource="{Binding OptionValues}"
+            Grid.Column="1"
+            AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Collection Proice" Binding="{Binding CollectionPrice}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Delivery Price" Binding="{Binding DeliveryPrice}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Dine In Price" Binding="{Binding DineInPrice}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <Button x:Name="Cancel">Cancel</Button>
+            <Button x:Name="Save">Save</Button>
+        </StackPanel>
+    </Grid>
+</UserControl>

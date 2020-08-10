@@ -1,0 +1,30 @@
+﻿<Window x:Class="Live_Menu_Point_Of_Sale.Views.HomeView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Live_Menu_Point_Of_Sale.Views"
+        mc:Ignorable="d"
+        Title="HomeView" Height="450" Width="800"
+        FontSize="17">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <!--top custom navbar-->
+        <!--top navbar buttons and switches will go here-->
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Home" x:Name="GoToLandingPage"></Button>
+        </StackPanel>
+        <!--top custom navbar-->
+        
+        <!--main content-->
+        <ContentControl Grid.Row="1" x:Name="ActiveItem"></ContentControl>
+        <!--main content-->
+    </Grid>
+</Window>

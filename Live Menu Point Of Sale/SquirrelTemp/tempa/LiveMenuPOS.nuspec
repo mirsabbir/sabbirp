@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>LiveMenuPOS</id>
+    <version>1.0.15</version>
+    <title>LiveMenu Point Of Sale</title>
+    <authors>Mir Sabbir Alam</authors>
+    <owners>
+    </owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>LiveMenu point of sale desktop application</description>
+  </metadata>
+</package>
